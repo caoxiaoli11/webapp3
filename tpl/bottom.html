@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+	</head>
+<style>
+	.icon-geren{
+		font-size: 18px!important;
+		line-height: 20px;
+	}
+</style>
+	<body>
+		<!--<script src="../js/mui.min.js"></script>-->
+		<script src="../js/zepto.js"></script>
+		<script type="text/javascript">
+		
+		</script>
+	<nav class="mui-bar mui-bar-tab">
+	      <a class="mui-tab-item " url='_www/index.html'>
+	          <span class="mui-icon mui-icon-home"></span>
+	          <span class="mui-tab-label">首页</span>
+	      </a>
+	      <a class="mui-tab-item" href="javascript:;" url='_www/tpl/tuwen.html'>
+	          <span class="mui-icon iconfont icon-tuwen"></span>
+	          <span class="mui-tab-label one1">图文</span>
+	      </a>
+	      <a class="mui-tab-item" href="javascript:;" url='_www/tpl/shiting.html'>
+	          <span class="mui-icon iconfont icon-shiting"></span>
+	          <span class="mui-tab-label">试听</span>
+	      </a>
+	      <a class="mui-tab-item" href="javascript:;" url='_www/tpl/denglu.html'>
+	          <span class="mui-icon iconfont icon-geren"></span>
+	          <span class="mui-tab-label">我的</span>
+	      </a>
+	  </nav>
+	</body>
+	
+	<script>
+	document.addEventListener('plusready',function(){
+		var curr=plus.webview.currentWebview();
+		var flag=true;
+		$('a').click(function(){
+			var url=$(this).attr('url');
+				var info=plus.networkinfo.getCurrentType();
+			   	if(info==0||info==1){
+			   		var url="_www/tpl/error1.html"
+			   	}else{
+			   		var url=url;
+			   	}
+			var title=$(this).find('.mui-tab-label').html();
+			
+			var curr=plus.webview.create(url,"",{},{title:title});
+   				curr.show("pop-in");
+		})
+
+		   curr.onloading=function(){
+				plus.nativeUI.showWaiting( "等待...", {modal:false} );
+			}
+			curr.onloaded=function(){
+				
+                plus.nativeUI.closeWaiting();
+			}
+		})
+	</script>
+</html>

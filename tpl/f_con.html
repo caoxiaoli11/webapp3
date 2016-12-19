@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/swiper.css" />
+	</head>
+<style>
+	<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.blue-slide {
+	background: url(../img/b3.jpg);
+	background-size: cover;
+	position: relative;
+}
+.red-slide {
+	background:url(../img/b2.jpg);
+	position: relative;
+	background-size: cover;
+	
+}
+.orange-slide {
+	background: url(../img/b4.jpg);
+	position: relative;
+	background-size: cover;
+}
+.swiper-slide {
+	line-height: 300px;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: right;
+  padding-right: 5px;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 8px;
+  background:#555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active{
+	background: #FA4848!important;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.slider1{
+	width: 100%;
+	height: 40px;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding-left: 15px;
+	font-size: 13px;
+	color: #fff;
+	line-height: 40px;
+	text-align: left;
+	
+	
+	
+	
+}
+.swiper-container{
+	height: 200px!important;
+	
+}
+.tuijian{
+	width: 100%;
+	height: 40px;
+	background: white;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	line-height: 40px;
+	color: #FA4848;
+	font-size: 18px;
+	
+}
+.liebiao{
+	width: 100%;
+	height: 90px;
+	background: white;
+	border-bottom: 1px solid #C7C7CC;
+	position: relative;
+	
+}
+.img_1{
+	width:70px;
+	height: 70px;
+	float: left;
+	background: red;
+	margin-top: 10px;
+	margin-left: 8px;
+	
+}
+.img_1 img{
+	width: 100%;
+	height:100%;
+}
+.title1{
+	width: 280px;
+	height: 80px;
+	/*background: blue;*/
+	float: left;
+	padding: 10px 8px;
+	
+}
+.biaoti{
+	width: 100%;
+	height: 20px;
+	font-size:16px;
+	
+}
+.con-nei{
+	font-size: 13px;
+	line-height: 20px;
+	margin-top: 6px;
+	display: inline-block;
+}
+.pingjia{
+	position: absolute;
+	right: 13px;
+	bottom: 5px;
+	float: left;
+	display: inline-block;
+}
+.one{
+	border: none!important;
+}
+		.clide{
+			width: 100%;
+			height:44px;
+			background:white;
+			overflow: hidden;
+		}
+		.clide_box{
+			/*width:560px;*/
+			height: 100%;
+			
+		}
+		.clide_box a{
+			text-decoration: none;
+			width: 70px;
+			height: 100%;
+			line-height: 44px;
+			text-align: center;
+			color: #000;
+			float: left;
+			display: inline-block;
+			font-size: 18px;
+			transition: all 1s linear;
+		}
+		.clide_box a:hover{
+			color: #FA4848;
+		}
+</style>
+</style>
+	<body>
+		<div class='clide'>
+			<div class="clide_box">
+				<a href="" url='guoji.html'>热点</a>
+				<a href="" url='redian.html'>国际</a>
+				<a href="" url='yule.html'>娱乐</a>
+				<a href="" url='caijing.html'>财经</a>
+				<a href="" url='tiyu.html'>体育</a>
+				<a href="" url='keji.html'>科技</a>
+			</div>
+		</div>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide blue-slide">
+    	<div class="slider1">
+    		青龙高速下月通车，青龙高速下月通车。。。
+    	</div>
+    </div>
+    <div class="swiper-slide red-slide">
+    	<div class="slider1">
+    		青龙高速下月通车，青龙高速下月通车。。。
+    	</div>
+    </div>
+    <div class="swiper-slide orange-slide">
+    	<div class="slider1">
+    		青龙高速下月通车，青龙高速下月通车。。。
+    	</div>
+    </div>
+  </div>
+  <div class="pagination"></div>
+</div>
+
+<div class="tuijian">
+	最新--最热
+</div>
+
+
+<div class="liebiao" url="_www/tpl/caijing_xiangqing11.html">
+	<div class="img_1">
+		<img src="../img/r22.jpg" alt=""/>
+		</div>
+	<div class="title1">
+	  <div class="biaoti">人们所有的知识都在增强。</div>
+	  <p class="con-nei">日本或进入火山活跃期。日本或进入火山活跃期。日本或进入火山活跃期。</p>
+	  <div class="pingjia">459评</div>
+	</div>
+</div>
+
+
+
+<div class="liebiao" url="_www/tpl/caijing_xiangqing22.html">
+	<div class="img_1">
+		<img src="../img/guo10.jpeg" alt="" />
+		</div>
+	<div class="title1">
+	  <div class="biaoti">日本进入新阶段</div>
+	  <p class="con-nei">日本或进入火山活跃期。日本或进入火山活跃期。日本或进入火山活跃期。</p>
+	  <div class="pingjia">459评</div>
+	</div>
+</div>
+
+
+<div class="liebiao" url="_www/tpl/caijing_xiangqing33.html">
+	<div class="img_1">
+		<img src="../img/guo7.jpeg" alt="" />
+		</div>
+	<div class="title1">
+	  <div class="biaoti">日本或进入火山活跃期。</div>
+	  <p class="con-nei">日本或进入火山活跃期。日本或进入火山活跃期。日本或进入火山活跃期。</p>
+	  <div class="pingjia">459评</div>
+	</div>
+</div>
+
+
+
+<div class="liebiao" url="_www/tpl/caijing_xiangqing55.html">
+	<div class="img_1">
+		<img src="../img/guo9.jpeg" alt="" />
+		</div>
+	<div class="title1">
+	  <div class="biaoti">日本进入新阶段</div>
+	  <p class="con-nei">日本或进入火山活跃期。日本或进入火山活跃期。日本或进入火山活跃期。</p>
+	  <div class="pingjia">459评</div>
+	</div>
+</div>
+
+
+<div class="liebiao one" url="_www/tpl/caijing_xiangqing44.html">
+	<div class="img_1">
+		<img src="../img/guo4.jpg" alt="" />
+		</div>
+	<div class="title1">
+	  <div class="biaoti">日本进入新阶段</div>
+	  <p class="con-nei">日本或进入火山活跃期。日本或进入火山活跃期。日本或进入火山活跃期。</p>
+	  <div class="pingjia">459评</div>
+	</div>
+</div>
+
+
+</body>
+<script src="../js/zepto.js"></script>
+<script src="../js/touch.js"></script>
+<script src="../js/swiper.min.js"></script>
+
+
+<script type="text/javascript">
+  var mySwiper = new Swiper('.swiper-container',{
+    loop: true,
+    pagination : '.pagination',
+	autoplay: 2500,
+  }); 
+document.addEventListener('plusready',function(){
+		var curr=plus.webview.currentWebview();
+       
+       $('.liebiao').click(function(){
+       	var url1=$(this).attr('url');
+       	if(url1){
+        var l1=plus.webview.create(url1);
+        	l1.show("slide-in-bottom");
+        }
+       })
+      
+      
+      
+           var ad=$('.clide_box a');
+           var flag=true;
+			ad.tap(function(){
+				
+				if(!flag){
+					return
+				}
+				flag=false;
+			var url=$(this).attr('url');
+			var title=$(this).html();
+			if(url){
+ 				var curr=plus.webview.create(url,"",{},{title:title});
+ 				curr.show("slide-in-left");
+		}
+ 	
+	})
+			 curr.onloading=function(){
+				plus.nativeUI.showWaiting( "等待...", {modal:false} );
+			}
+			curr.onloaded=function(){
+				flag=true;
+                plus.nativeUI.closeWaiting();
+			}
+	})
+</script>
+<script>
+	 var navbox=document.getElementsByClassName('clide_box')[0];
+    var links=navbox.getElementsByTagName('a');
+    navbox.style.width=links.length*links[0].offsetWidth+'px';
+    var start;
+    touch.on("body","dragstart",".clide_box",function(){
+        start=navbox.offsetLeft;
+    })
+    touch.on("body","drag",".clide_box",function(e){
+        var left=start+e.x;
+        if(left>0){
+            left=0
+        }
+        if(left<-(navbox.offsetWidth-document.documentElement.clientWidth)){
+            left=-(navbox.offsetWidth-document.documentElement.clientWidth);
+        }
+        navbox.style.marginLeft=left+'px';
+    })
+    document.addEventListener('plusready',function(){
+			ws=plus.webview.currentWebview();
+	ws.setPullToRefresh({support:true,
+		height:"50px",
+		range:"200px",
+		contentdown:{
+			caption:"下拉可以刷新"
+		},
+		contentover:{
+			caption:"释放立即刷新"
+		},
+		contentrefresh:{
+			caption:"正在刷新..."
+		}
+	},function(){
+		setTimeout(function(){
+			ws.endPullToRefresh();
+		},2000)
+		
+	});
+	plus.nativeUI.toast("下拉可以刷新");
+			})
+</script>
+
+</html>

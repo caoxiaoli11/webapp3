@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+	</head>
+	
+<style>
+ *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+	.bjimg{
+		width: 100%;
+		height: 200px;
+		background: url(../img/rwbj.jpg);
+		background-size: cover;
+		position: relative;
+		}
+		.zhe1{
+			width: 100%;
+			height: 100%;
+			background: rgba(77,77,75,0.5);
+			z-index: 2;
+		}
+		.zhaopian{
+			width:100px;
+			height: 100px;
+			border-radius: 50%;
+			background:url(../img/renwu.jpg);
+			background-size:cover;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			top: 0;
+			right: 0;
+			margin: auto;
+		}
+		
+		.name{
+			width:100px;
+			height: auto;
+			color: #fff;
+			font-size: 15px;
+			text-align: center;
+			position: absolute;
+			left: 28%;
+			bottom: 5px;
+			}
+			.ce1{
+				width: 100%;
+				height:60px;
+				background: #F0F0F0;
+				border-bottom: 1px solid #D1D1D1;
+				position: relative;
+				
+			}
+			.onee{
+				line-height:60px;
+				font-size: 33px;
+				position: absolute;
+				left:25px;
+				top: 9px;
+				color: #8E8E8E;
+				
+			}
+			.one11{
+				
+				border: none!important;
+				
+			}
+			.genzong{
+				position: absolute;
+				left:70px;
+				top:25px;
+				font-size: 18px;
+				width: 100px;
+				height: 50px;
+			}
+			.icon-jiantou{
+				position: absolute;
+			   right: 7px;
+			   top: 28px;
+			   font-size:35px;
+			   color: #525252;
+			}
+</style>
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/zepto.js"></script>
+		<script src='../js/touch.js'></script>
+		<script >
+			mui.init()
+		</script>
+		<div class="bjimg">
+			<div class="zhe1"></div>
+			<div class="zhaopian">
+				
+			</div>
+			<p class='name'>郁杨希下</p>
+		</div>
+		<div class="ce1">
+			<span class='iconfont icon-wangyuanjing onee'></span>
+			<span class='genzong'>&nbsp跟踪</span>
+			<span class='iconfont icon-jiantou'></span>
+		</div>
+		<div class="ce1">
+			<span class='iconfont icon-dingyue onee'></span>
+			<span class='genzong'>&nbsp订阅</span>
+			<span class='iconfont icon-jiantou'></span>
+		</div>
+		<div class="ce1">
+			<span class='iconfont icon-favorite onee'></span>
+			<span class='genzong'>&nbsp收藏</span>
+			<span class='iconfont icon-jiantou'></span>
+		</div>
+		<div class="ce1">
+			<span class='iconfont icon-fankui onee'></span>
+			<span class='genzong'>&nbsp反馈</span>
+			<span class='iconfont icon-jiantou'></span>
+		</div>
+		<div class="ce1">
+			<span class='iconfont icon-bangzhu onee'></span>
+			<span class='genzong'>&nbsp帮助</span>
+			<span class='iconfont icon-jiantou'></span>
+		</div>
+		<div class="ce1 one11">
+			<span class='iconfont icon-tuichudenglu onee'></span>
+			<span class='genzong'>&nbsp退出登录</span>
+			
+		</div>
+		
+	</body>
+<script>
+ document.addEventListener('plusready',function(){
+ 	var curr=plus.webview.currentWebview();
+	$('.one11').tap(function(){
+		
+		curr.hide("slide-out-left")
+	})
+	touch.on(window, "swipeleft", function(){
+		curr.hide("slide-out-left")
+	});
+	})
+</script>
+</html>

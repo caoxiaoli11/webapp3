@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script src='../js/zepto.js'></script>
+		<script type="text/javascript">
+			mui.init()
+			
+				document.addEventListener('plusready',function(){
+			var curr=plus.webview.currentWebview();
+			
+				var clientH=document.documentElement.clientHeight;
+            var con=plus.webview.create("_www/tpl/_kejixiangqing1.html","",{height:(clientH-88)+"px",top:"44px"});
+var bottom=plus.webview.create("_www/tpl/bottom.html","",{height:"44px",bottom:0});
+   	curr.append(bottom);
+			curr.append(con);
+			con.onloading=function(){
+				plus.nativeUI.showWaiting( "等待...", {} );
+			}
+			con.onloaded=function(){
+				plus.nativeUI.closeWaiting();
+			}
+			var tt=document.getElementsByClassName('mui-title')[0];
+			tt.innerHTML=curr.title;
+			})
+		
+		</script>
+			<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title"></h1>
+		    </header>
+	</body>
+
+</html>

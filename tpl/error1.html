@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+<style>
+			*{
+				margin:0;
+				padding:0;
+				box-sizing:border-box;
+			}
+			.internet{
+				width:150px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color: #000000;
+				/*background: red;*/
+				font-size: 18px;
+				position: absolute;
+				border: 1px solid #2AC845;
+				border-radius: 20px;
+				top: 200px;
+				left: 130px;
+				
+				
+			}
+			.img{
+				width: 88px;
+				height: 99px;
+				background: url(../img/error.png);
+				background-size: cover;
+				position: absolute;
+				left:50px;
+				top:180px;
+			}
+			.box{
+				width: 300px;
+				height: 1px;
+				background: #2AC845;
+				position: absolute;
+				left: 30px;
+				top: 300px;
+				border-radius: 20px;
+			}
+		</style>
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready',function(){
+				plus.nativeUI.toast( "链接互联网", {} );
+			})
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">返回</h1>
+		</header>
+		<div class="img"></div>
+		<div class='internet'>请连接互联网</div>
+		<div class="box"></div>
+		</body>
+
+</html>

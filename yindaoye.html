@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/swiper.css">
+		
+<style>
+body,html{
+	width: 100%;
+	height: 100%!important;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.blue-slide {
+	background:url(img/bj.png);
+	background-size: cover;
+	position: relative;
+}
+/*.zhe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	
+}*/
+@-webkit-keyframes top{
+	0%{
+		transform: translateY(-500px);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes top{
+	0%{
+		transform: translateY(-500px);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.logo{
+	z-index: 1!important;
+	position: absolute;
+	left: 30%;
+	top: 0.5rem;
+	margin: auto;
+	width:0.45rem;
+	height: 0.36rem;
+    line-height: 0;
+    animation:top 1s ease forwards;
+    -webkit-animation: top 1s ease forwards;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+	
+}
+.swiper-slide p{
+	position: absolute;
+	left: 46%;
+	top: 0.68rem;
+	font-size: 20px;
+	color: #fff;
+	/*font-family:"微软雅黑";*/
+	line-height: 0;
+	 animation:top 1s ease forwards;
+    -webkit-animation: top 1s ease forwards 0.5s;
+    opacity: 0;
+
+
+}
+@-webkit-keyframes left{
+	0%{
+		transform: scale(0,0);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: scale(1,1);
+		opacity: 1;
+	}
+}
+@keyframes left{
+	0%{
+		transform: scale(0,0);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: scale(1,1);
+		opacity: 1;
+	}
+}
+.cha{
+	width:2.43rem;
+	 height: 2.96rem;
+	 position: absolute;
+	 top: 18%;
+	 left:24%;
+	 margin: auto;
+	 transition: all 1s ease;
+	  animation:left 1s ease forwards;
+	  
+    -webkit-animation: left 1s ease forwards 1.5s;
+   opacity: 0;
+    
+}
+.cha img{
+	width:100%;
+	height: 100%;
+}
+@-webkit-keyframes wen1{
+	0%{
+		transform: scale(0,0) rotate(360deg);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: scale(1,1) rotate(0deg);
+		opacity: 1;
+	}
+}
+@keyframes wen1{
+	0%{
+		transform: scale(0,0) rotate(360deg);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: scale(1,1) rotate(0deg);
+		opacity: 1;
+	}
+}
+.wenzi1{
+	width: 3rem;
+	height: 1rem;
+	font-size: 20px;
+	position: absolute;
+	left: 18%;
+	top: 70%;
+	color: #ccc;
+	line-height: 0;
+	transition:all  1s linear;
+	  animation:wen1 1s ease forwards;
+	  
+    -webkit-animation: wen1 1s ease forwards 2s;
+   opacity: 0;
+	
+	
+}
+
+@-webkit-keyframes wen2{
+	0%{
+		transform: translateX(-500px);
+		opacity: 0;
+		
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes wen1{
+	0%{
+		transform:translateX(-500px);
+		opacity: 0;
+		
+	}
+	100%{
+		transform:  translateX(0);
+		opacity: 1;
+	}
+}
+.wenzi2{
+	width: 4rem;
+	height: 0.5rem;
+	font-size: 15px;
+	position: absolute;
+	left: 5%;
+	top: 75%;
+	color: #fff;
+	
+	line-height:30px;
+	  animation:wen2 1s ease forwards;
+	  
+    -webkit-animation: wen2 1s ease forwards 2.5s;
+   opacity: 0;
+	
+}
+@-webkit-keyframes st{
+	0%{
+		transform: translateY(10px);
+		opacity: 0;
+		
+	}
+	50%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(10px);
+		opacity: 0;
+		
+	}
+}
+@keyframes st{
+	0%{
+		transform: translateY(10px);
+		opacity: 0;
+		
+	}
+	50%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(10px);
+		opacity: 0;
+		
+	}
+}
+.start{
+	width: 1.2rem;
+	height: 0.4rem;
+	border-radius: 20px;
+	border: 2px solid #fff;
+	color: #fff;
+	line-height: 0.4rem;
+	text-align: center;
+	font-size: 18px;
+	position: fixed;
+	left: 35%;
+	top: 83%;
+	z-index: 100!important;
+	/*transition: all 1.5s linear;
+	 animation:st 1.5s ease infinite;
+	  
+    -webkit-animation: st 2s ease infinite ;*/
+}
+.red-slide {
+	background:url(img/bj.png);
+	background-size: cover;
+	position: relative;
+}
+.orange-slide {
+	background:url(img/bj.png);
+	background-size: cover;
+	position: relative;
+	z-index: 100!important;
+}
+.swiper-slide {
+	line-height: 300px;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+	overflow: hidden;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.swiper-container{
+	width: 100%;
+	height: 100%!important;
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+	line-height:20px!important
+}
+</style>
+</head>
+<body>
+	
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide blue-slide">
+    	<!--<div class="zhe"></div>-->
+         <div class="logo">
+         	<img src="img/1.png" alt="" />
+         </div>
+         <p  class='p1'>头条百家</p>
+         <div class="cha">
+         	<img src="img/cha1.png" alt="" />
+         </div>
+         <div class="wenzi1">收藏资讯，智能挖掘！</div>
+         <div class="wenzi2">收藏喜欢的资讯，帮你智能深度挖掘！</div>
+   </div>
+    <div class="swiper-slide red-slide">
+    	<div class="logo">
+         	<img src="img/1.png" alt="" />
+         </div>
+         <p  class='p1'>头条百家</p>
+         <div class="cha">
+         	<img src="img/cha2.png" alt="" />
+         </div>
+         <div class="wenzi1">收藏资讯，智能挖掘！</div>
+         <div class="wenzi2">收藏喜欢的资讯，帮你智能深度挖掘！</div>
+    </div>
+    <div class="swiper-slide orange-slide">
+    	<div class="logo">
+         	<img src="img/1.png" alt="" />
+         </div>
+         <p  class='p1'>头条百家</p>
+         <div class="cha">
+         	<img src="img/cha3.png" alt="" />
+         </div>
+         <div class="wenzi1">收藏资讯，智能挖掘！</div>
+         <div class="wenzi2">收藏喜欢的资讯，帮你智能深度挖掘！</div>
+         <div class='start'>立即体验</div>
+    </div>
+  </div>
+  <div class="pagination"></div>
+</div>
+
+</body>
+ <script src="js/zepto.js"></script>
+ <script src="js/swiper.min.js"></script>	
+ <script src="js/rem.js"></script>	
+
+<script>
+
+	var mySwiper = new Swiper('.swiper-container',{
+    loop: false,
+//	autoplay: 3000,
+	pagination : '.pagination',
+	onSlideChangeStart: function(e){
+      var index=e.activeIndex;
+      $('.swiper-slide').eq(index).find(".logo").css({webkitAnimation:"top 1s ease forwards"})
+    }
+  });  
+  $(".start").tap(function(){
+//	alert(1)
+  	location.href="index.html";
+  })
+  
+  
+
+</script>
+</html>

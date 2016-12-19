@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <!--<script src="js/mui.min.js"></script>-->
+     <script src="js/zepto.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+  <style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.top{
+		width: 100%;
+		height: 50px;
+		background: #FA4848;
+	}
+		.icon-left{
+			display:inline-block;
+			width: 40px;
+			height: 50px;
+			/*background: red;*/
+			float: left;
+			margin-left: 10px;
+		}
+		.icon-geren{
+			text-align: center;
+			line-height: 55px;
+			font-size: 25px;
+			color: #000;
+		}
+		.icon-right{
+			display:inline-block;
+			width: 40px;
+			height: 50px;
+			/*background: red;*/
+			float: right;
+			margin-right: 10px;
+			
+		}
+		.icon-saoyisao{
+			text-align: center;
+			line-height: 52px;
+			font-size: 27px;
+		}
+		.biao{
+			width:40px;
+			height:32px;
+			float: left;
+			margin-left: 110px;
+			margin-top: 10px;
+			
+			
+		}
+		.biao img{
+			width: 100%;
+			height: 100%;
+		}
+
+	</style>
+   
+</head>
+<body>
+	<header class="top">
+			<a href=""  class='left1'>
+		     <div class=" icon-left iconfont icon-geren"></div>
+		   </a>
+		    	<div class='biao'>
+		    	<img src="img/1.png" alt="" />
+		    	</div>
+		   
+		    <div class="icon-right iconfont icon-saoyisao"></div>
+		</header>
+		
+</body>
+
+
+ <script >
+
+   document.addEventListener('plusready',function(){
+   if(!plus.storage.getItem("first")){
+   plus.storage.setItem("first","first");
+   location.href='_www/yindaoye.html';
+   return;
+   }
+   
+   
+   
+   
+//头部
+    
+	var curr=plus.webview.currentWebview();
+	
+	$('.icon-right').click(function(){
+		var er=plus.webview.create("_www/tpl/erweima.html");
+		er.show("fade-in");
+	})
+	
+	var bottom=plus.webview.create("_www/tpl/bottom.html","",{height:"44px",bottom:0});
+   	curr.append(bottom);
+   	var info=plus.networkinfo.getCurrentType();
+   	if(info==0||info==1){
+   		var url="_www/tpl/error.html"
+   	}else{
+   		var url="_www/tpl/f_con.html"
+   	}
+   	var clientH=document.documentElement.clientHeight;
+   	var con=plus.webview.create(url,"",{height:(clientH-94)+"px",top:"50px",bounce:"all"});
+   	curr.append(con);
+ 
+	var left=plus.webview.create("_www/tpl/menu.html","ww",{width:"70%",left:0});	 
+   $(".left1").tap(function(){	
+      left.show("ww","slide-in-left");
+//	    		curr.setStyle({mask:"rgba(0,0,0,0.5)"});
+	    	
+    })	 
+    	  
+    	  curr.addEventListener("maskClick",function(){
+    	  	
+			left.hide("ww","slide-out-left")
+//			curr.setStyle({mask:"none"})
+			})
+		
+
+   	       con.onloading=function(){
+				plus.nativeUI.showWaiting( "等待...", {modal:false} );
+			}
+			con.onloaded=function(){
+                
+                plus.nativeUI.closeWaiting();　
+			}
+   })
+    </script>
+</html>
